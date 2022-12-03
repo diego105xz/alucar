@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <style>
+        body{
+            margin: 0;
+            font-family: sans-serif;
+            box-sizing: border-box;
+        }
+
+        header{
+            width: 100%;
+            background-color: whitesmoke;
+            height: 10vh;
+            display: flex;
+        }
+
+        header div, article{
+            width: 60%;
+            margin: auto;
+        }
+
+        header h1{
+            font-size: 20px;
+            font-weight: bold;
+            padding: 10px;
+            margin: 0%;
+        }
+
+        .capa{
+            background-image: url('img/capa.jpg');
+            height: 90vh;
+            background-size: cover;
+        }
+
+        .sombra{
+            background-color: rgba(0, 0, 0, 0.6);
+            width: 100%;
+            height: 20vh;
+            display: flex;
+            justify-content: end;
+            align-items: center;
+        }
+
+        .sombra h2{
+            color: white;
+            font-size: 18px;
+            width: 200px;
+            margin-right: 300px;
+        }
+
+
+        .galeria{
+            display: flex;
+        }
+
+        img{
+            width: calc(100%/3);
+            margin: 3px;
+        }
+
+        p{
+            font-size: 16px;
+        }
+
+        .estilo-paragrafo{
+            border-left: 1px solid black;
+            padding-left: 10px;
+        }
+
+        .red{
+            height: 100px;
+            background-color: red;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        .red h3{
+            color: white;
+            background-color: rgb(108, 0, 0);
+            width: 100%;
+            text-align: center;
+            padding: 2px;
+            font-size: 24px;
+        }
+
+        article{
+            padding: 20px;
+        }
+
+        input{
+            margin: 2px 0px 15px 0px;
+            width: 100%;
+        }
+
+        button{
+            margin-top: 10px;
+            padding: 5px;
+            width: 100%;
+            background-color: red;
+            font-size: 16px;
+            border: 0px;
+            color: white;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        footer{
+            width: 100%;
+            background-color: whitesmoke;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            color: red;
+        }
+    </style>
+    <title>AluCar - Aluguel de Carros</title>
+</head>
+<body>
+    <header>
+        <div>
+            <h1>AluCar</h1>
+        </div>
+    </header>
+    <main>
+        <section class="capa">
+            <div class="sombra">
+                <h2>AluCar<br> Aluguel de Carros</h2>
+            </div>
+        </section>
+        <section>
+            <article>
+                <h3>Sobre nós</h3>
+                <p>Há 45 anos atuando na área de locação de veículos com segurança e garantia de satisfação. 
+                    Temos os melhores preços e modelos do mercado.</p>
+                <div class="galeria">
+                    <img src="img/img1.jpg" alt="uno">
+                    <img src="img/img2.jpg" alt="hilux">
+                    <img src="img/img3.jpg" alt="gol">
+                </div>
+                <p class="estilo-paragrafo">O compromisso da AluCar é com a qualidade.</p>
+                <p class="estilo-paragrafo">Os melhores carros estão aqui!</p>
+                <p class="estilo-paragrafo">Assistência 24hrs.</p>
+            </article>
+            <div class="red">
+                <h3>Contato</h3>
+            </div>
+            <article>
+                <h4>Análise de cadastro</h4>
+                <p>Preencha os campos abaixo e analisaremos seus dados.
+                    Se tudo estiver correto ligaremos para marcar uma visita sua à loja.</p>
+                <form method="post" action="https://www.devmedia.com.br/codigos/formularios/aula9/">
+                    <fieldset>
+                        <legend>Dados pessoais</legend>
+                        <label>Nome</label>
+                        <input type="text" name="nome" placeholder="Digite seu nome" required>
+                        <label>Data de Nascimento</label >
+                        <input type="date" name="data_nascimento" required>
+                        <label >Telefone</label>
+                        <input type="tel" name="telefone" placeholder="(XX) XXXXX-XXXX" required>
+                    </fieldset>
+                    <fieldset>
+                        <legend>CNH</legend>
+                        <label>Número do Registro</label>
+                        <input type="number" name="numero_registro" placeholder="Informe o número da sua CNH" required>
+                        <label>Validade</label>
+                        <input type="date" name="validade" required>
+                    </fieldset>
+                    <fieldset>
+                        <legend>Carro</legend>
+                        <label>Modelo</label>
+                        <select name="carro" required>
+                            <option value="">Escolha um carro</option>
+                            <optgroup label="Volkswagem">
+                                <option value="gol">Gol</option>
+                                <option value="golf">Golf</option>
+                                <option value="jetta">Jetta</option>
+                                <option value="virtus">Virtus</option>
+                                <option value="voyage">Voyage</option>
+                            </optgroup>
+                            <optgroup label="Honda">
+                                <option value="civic">Civic</option>
+                                <option value="city">City</option>
+                                <option value="fit">Fit</option>
+                                <option value="hrv">HR-V</option>
+                                <option value="crv">CRV</option>
+                            </optgroup>
+                            <optgroup label="Toyota">
+                                <option value="corolla">Corolla</option>
+                                <option value="etios">Etios</option>
+                                <option value="yaris">Yaris</option>
+                                <option value="sw4">SW4</option>
+                                <option value="hilux">Hilux</option>
+                            </optgroup>
+                        </select>
+                    </fieldset>
+                    <button>Enviar Formário de Cadastro</button>
+                </form>
+            </article>
+        </section>
+    </main>
+    <footer>
+        <p>Copyright 2022 - AluCar</p>
+    </footer>
+</body>
+</html>
